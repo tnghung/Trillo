@@ -18,7 +18,10 @@
   --line: 1px solid var(--color-grey-dark-3);
 }
 
-
+$bp-largest: 64em; // 1024px
+$bp-large: 56.25em; // 900px
+$bp-medium: 44.375em; // 710px
+$bp-small: 31.25em; // 500px
 
 * {
   padding: 0;
@@ -34,6 +37,16 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @media screen and(max-width: $bp-largest) {
+    font-size: 56%;
+  }
+  @media screen and(max-width: $bp-medium) {
+    font-size: 58%;
+  }
+  @media screen and(max-width: $bp-small) {
+    font-size: 50%;
+  }
 }
 
 body {
